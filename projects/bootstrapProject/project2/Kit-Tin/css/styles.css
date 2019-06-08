@@ -35,6 +35,7 @@ h3 {
 #start-img {
     transform: rotate(25deg);
     width: 100%;
+    position: absolute;
 }
 
 .navbar {
@@ -64,6 +65,8 @@ h3 {
 #features {
     color: #8f8f8f;
     text-align: center;
+    background-color: #fff;
+    position: relative;
 }
 
 .features-container {
@@ -121,4 +124,43 @@ h3 {
 
 .pricing-column {
     padding: 3%;
+}
+
+#cta {
+    background-color: #ff4c68;
+    padding: 3% 27%;
+    text-align: center;
+}
+
+#cta >h2 {
+    font-weight: 500;
+    color: #fff;
+}
+
+#footer {
+    background-color: #fff;
+    padding: 7% 15%;
+    text-align: center;
+    color: grey;
+}
+
+#footer > i {
+    padding: 20px 10px;
+}
+
+@media (max-width: 990px) {
+    #start-img {
+        position: static;
+        transform: rotate(0);
+        transform: scale(1.4);
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    #footer>i {
+        transform: scale(1.5);
+        padding: 1% 3%;
+    }
 }

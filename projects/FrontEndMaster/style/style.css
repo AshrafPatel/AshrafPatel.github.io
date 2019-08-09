@@ -178,17 +178,15 @@ h1 {
 
 /*BUILDING CONTAINER*/
 .buildContainer {
-    display: flex;
-    flex-direction: column;
     padding: 140px 240px;
     -webkit-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
     -moz-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
     box-shadow: 3px 6px 44px -9px rgba(240,240,240,0.97);
     max-width: 1440px;
-    margin-bottom: 100px;
-    align-self: center;
+    display: block;
+    margin: auto;
+    z-index: 999;
 }
-
 .buildContainer button {
     margin: 0px 50px;
 }
@@ -196,10 +194,16 @@ h1 {
 /*CLOSING CONTAINER*/
 .closingContainer {
     background-color: hsl(192, 100%, 9%);
-    padding-top: 800px;
+    padding: 400px 0;
 }
 
 /*FOOTER*/
 footer {
     background-color: hsl(192, 100%, 9%);
+    padding: 200px 0;
+}
+
+.attribution {
+    color: white;
+    font-size: 50px;
 }

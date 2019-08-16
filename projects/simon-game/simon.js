@@ -1,10 +1,5 @@
 //Get current year
-let year = getYear()
-function getYear() {
-	let date = new Date();
-	return date.getFullYear()
-}
-$(".copyright").append(" " + year);
+$("#year").text(new Date().getFullYear());
 
 
 //Game Variables

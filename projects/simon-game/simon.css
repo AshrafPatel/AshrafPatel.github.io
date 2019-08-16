@@ -10,7 +10,8 @@ body {
 h1 {
 	font-family: 'Press Start 2P', cursive;
 	margin: 100px 0;
-	color: white;
+	color: #8C7E6C;
+	font-size: 45px;
 }
 
 .top-row {

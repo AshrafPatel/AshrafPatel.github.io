@@ -6,7 +6,6 @@ $("#year").text(new Date().getFullYear());
 let buttonColours = ["red", "blue", "green", "yellow"];
 var audioObj = new Audio();
 let gamePattern = [];
-let userClickedPattern = [];
 let gameHasStarted = false;
 let counter = 0;
 let level = 0;
@@ -14,12 +13,13 @@ let level = 0;
 
 
 function nextSequence() {
+	counter = 0;
 	level++;
 	$("h1").text("Level " +  level)
 	let randomChosenColour = whatColor(Math.floor(Math.random() * 4));
+	gamePattern.push(randomChosenColour);
 	animateColor(randomChosenColour); 
 	playSound(randomChosenColour);
-	gamePattern.push(randomChosenColour);
 }
 
 function whatColor(num) {
@@ -54,68 +54,82 @@ function animateUserInput(color) {
 }
 
 function animateColor(color) {
-	$("#" + color).fadeOut(250).fadeIn(250);	
-	gamePattern.push(color);
+	$("#" + color).fadeOut(250).fadeIn(250);
 }
 
-function checkAnswer(color) {
-	if (color === gamePattern[counter]) {
-		counter++;
-		return true;
-	} else {
-		return false;
-	}
-}
-
-function checkUserInputs() {
-	if (counter === gamePattern.length-1) {
-		return true
-	} else {
-		return false;
-	}
-}
 
 function checkGame(color) {
-	let userResponse = checkAnswer(color);
-	let sequenceEnded = checkUserInputs();
-	if (sequenceEnded && userResponse) {
-		setTimeout(function () {
-			nextSequence();
-		}, 1000);
+	if (color === gamePattern[counter]) {
+		playSound(color);
+		animateUserInput(color);
+		letPatternlength = gamePattern.length;
+		counter++;
+		console.log(counter + " " + letPatternlength)
+		if (counter == letPatternlength) {
+			setTimeout(function () {
+				nextSequence();
+			}, 1000);
+		}
+	} else {
+		gameOver();
 	}
 }
-
-// $(".buttons").keypress((e) => {
-// 	if (gameHasStarted) {
-// 		let userClickedColor = e.target.id;
-// 		animateColor(userClickedColor)
-// 	}
-// })
 
 $(".buttons").click(function(e)  {
 	if (gameHasStarted) {
 		let userClickedColor = e.target.id;
-		playSound(userClickedColor);
-		animateUserInput(userClickedColor);
 		checkGame(userClickedColor);
-		
 	}
 });
 
 function gameStart() {
+	$("h1").text("Use Q, W, A, S or mouse");
 	setTimeout(() => {
-		$("h1").text("Use Q, W, A, S or mouse");
 		nextSequence();
 		gameHasStarted = true;
-	}, 500);
+	}, 1000);
 }
 
 function gameOver() {
-
+	level = 0;
+	counter = 0;
+	gamePattern = [];
+	$("body").toggleClass("gameover")
+	setTimeout(()=> {
+		$("body").toggleClass("gameover");
+	}, 300)
+	audioObj.src = "./sounds/wrong.mp3"
+	audioObj.play();
+	gameHasStarted = false;
+	$("h1").text("Game Over, Press a key to start again");
 }
 
-$(document).keypress(() => {
+$(document).keypress((e) => {
+	if (!gameHasStarted) {
+		gameStart();
+	} else {
+		let lowerCaseKey = e.key.toLowerCase();
+		switch(lowerCaseKey) {
+			case "q":
+				checkGame("red");
+				break;
+			case "w":
+				checkGame("yellow");
+				break;
+			case "a":
+				checkGame("green");
+				break;
+			case "s":
+				checkGame("blue");
+				break;
+			default:
+				gameOver();
+		}
+	}
+});
+
+$("h1").click(() => {
 	if (!gameHasStarted) {
 		gameStart();
 	}
-});
+})

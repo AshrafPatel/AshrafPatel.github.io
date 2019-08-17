@@ -68,3 +68,7 @@ footer p {
 	box-shadow: 60px 0px 120px white;
 	background: linear-gradient(to right, #7b79d7,#1f5416);
 }
+
+.gameover {
+	background-color: red;
+}

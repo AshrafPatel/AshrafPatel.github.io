@@ -1,15 +1,18 @@
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Amiri|Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
             text-align: center;
-            background-color: #89FFFF
+            background: linear-gradient(85deg, #4BBAD1, #083156);
         }
 
         h1 {
-            font-family: 'Amiri', serif;
-            color: rgb(183, 228, 228);
-            font-size: 3.5rem;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 5.5rem;
+            text-shadow: 4px 2px black;
+            text-transform: uppercase;
+            font-weight: 1000;
         }
 
         a:link {
@@ -17,38 +20,138 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        li {
-            list-style: none;
-            margin: 10px auto;
+        button {
+            background-color: #1E90B0;
+            padding: 15px;
+            color: #FFFED4;
+            width: 400px;
+            font-size: 1.5rem;
+            height: 80px;
+            box-shadow: 0px 6px black;
+            position: relative;
+            align-self: flex-end;
+            border-radius: 10px;
         }
 
-        button {
-            background-color: #6EF2F2;
+        button:hover {
+            top: 2px;
+            box-shadow: 0px 4px black;
+        }
+
+        button:active {
+            top: 6px;
+            box-shadow: none;
+        }
+
+        .project {
+            background: #0F4664;
+            height: 380px;
+            display: flex;
+            flex-direction: column;
             padding: 15px;
-            color: #88A3A3;
-            width: 700px;
-            font-size: 1.5rem;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 6px 3px black;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        img {
+            margin: 3px;
         }
     </style>
 </head>
 <body>
-    <h1>Projects</h1>
-    <ul>
-        <li><a href="./background-generator/index.html"><button>Background Generator(Vanilla JS)</button></a></li>
-        <li><a href="./dancing-robot/index.html"><button>Dancing Robot (Advanced CSS/Animations)</button></a></li>
-        <li><a href="./image-gallery/index.html"><button>Image Gallery (CSS)</button></a></li>
-        <li><a href="./bootstrapProject/project2/Kit-Tin/index.html"><button>Bootstrap startup website (Kinder)</button></a></li>
-        <!-- <li><a href="./bootstrapProject/project1/index.html"><button>Bootstrap startup website 2 (Project Dystopia)</button></a></li> -->
-        <li><a href="./Dodge obstacles/Project2.html"><button>Dodge the zombies game</button></a></li>
-        <li><a href="./Javascript game/index.html"><button>Frogger JavaScript</button></a></li>
-        <li><a href="https://face-recognition-ash.herokuapp.com/"><button>Face Recognition Program (Fullstack)</button></a></li>
-        <li><a href="./Random Dice/dicee.html"><button>Dice Roll</button></a></li>
-        <li><a href="./Drum Kit/drum.html"><button>Drum App</button></a></li>
-        <li><a href="./FrontEndMaster/index.html"><button>Front End Mentor Challenge</button></li>
-        <li><a href="./simon-game/simon.html"><button>Simon says Game</button></li>
-        <li><a href="https://desolate-wave-24043.herokuapp.com/"><button>Sign Up to my Newsletter</button></a></li>
-        <li><a href="https://pure-inlet-71397.herokuapp.com/"><button>Cool React Pokedex App with Redux</button></a></li>
-        <li><a href="https://protected-bastion-17210.herokuapp.com/"><button>Todo List with Mongo DB and EJS</button></a> </li>
-        <li><a href="https://shielded-stream-47610.herokuapp.com/"><button>My Blogsite using MongoDB and EJS</button></a></li>
-    </ul>
+    <h1>Web Projects</h1>
+    <div class="projects">
+        <div class="project">
+            <img src="./img/face-recognitionPNG.png" alt="">
+            <a href="https://face-recognition-ash.herokuapp.com/"><button>Face Recognition Program (React &
+                    PLSQL)</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/pokedexPNG.png" alt="">
+            <a href="https://pure-inlet-71397.herokuapp.com/"><button>Cool React Pokedex App with Redux (may require
+                    refresh)</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/eat-cakePNG.png" alt="">
+            <a href="https://protected-bastion-17210.herokuapp.com/"><button>Todo List with Mongo DB and EJS (No
+                    Login)</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/blog-mongoPNG.png" alt="">
+            <a href="https://shielded-stream-47610.herokuapp.com/"><button>My Blogsite using MongoDB and
+                    EJS</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/react calculatorPNG.png" alt="">
+            <a href="https://codepen.io/4shr4f/full/jOOZxOE"><button>React Calculator</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/markdown previewerPNG.png" alt="">
+            <a href="https://codepen.io/4shr4f/full/WNNdomY"><button>React Markdown Previewer</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/simon-saysPNG.png" alt="">
+            <a href="./simon-game/simon.html"><button>Simon says Game</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/dodge-zombiesPNG.png">
+            <a href="./Dodge obstacles/Project2.html"><button>Dodge the zombies game</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/froggerPNG.png">
+            <a href="./Javascript game/index.html"><button>Frogger JavaScript</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/escapism.png" alt="">
+            <a href="./firstSemsterSite/Home.html"><button>First Website Created (Peru and Greece Work)</button></a>
+        </div>
+        <div class="project">
+            <img src="img/background-generatorPNG.png">
+            <a href="./background-generator/index.html"><button>Background Generator(Vanilla JS)</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/newsletterPNG.png" alt="">
+            <a href="https://desolate-wave-24043.herokuapp.com/"><button>Sign Up to my Newsletter Demo</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/quote generatorPNG.png" alt="">
+            <a href="https://codepen.io/4shr4f/full/ZorZqp"><button>Quote Generator Vanilla JS</button></a>
+        </div>
+        <div class="project">
+            <img src="img/dancing-robotPNG.png">
+            <a href="./dancing-robot/index.html"><button>Dancing Robot (Advanced CSS/Animations)</button></a>
+        </div>
+        <div class="project">
+            <img src="img/image-galleryPNG.png">
+            <a href="./image-gallery/index.html"><button>Image Gallery (CSS)</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/kinderPNG.png">
+            <a href="./bootstrapProject/project2/Kit-Tin/index.html"><button>Bootstrap startup website (Kinder)</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/project-dystopiaPNG.png">
+            <a href="./bootstrapProject/project1/index.html"><button>Bootstrap startup website Unfinished (Project Dystopia)</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/dice-rollPNG.png" alt="">
+            <a href="./Random Dice/dicee.html"><button>Dice Roll</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/drum-kitPNG.png" alt="">
+            <a href="./Drum Kit/drum.html"><button>Drum App</button></a>
+        </div>
+        <div class="project">
+            <img src="./img/frontendchallengePNG.png" alt="">
+            <a href="./FrontEndMaster/index.html"><button>Front End Mentor Challenge</button></a>
+        </div>
+    </div>   
 </body>

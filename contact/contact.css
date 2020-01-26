@@ -11,6 +11,10 @@ body {
     background: linear-gradient(#494949, #191919);
 }
 
+header {
+    font-size: 25px;
+}
+
 .ContactMe {
     margin-top: 0px;
 }

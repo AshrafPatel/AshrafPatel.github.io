@@ -12,6 +12,10 @@ body {
     background: linear-gradient(#00ABED, #005ADA);
 }
 
+header {
+    font-size: 25px;
+}
+
 h1 {
     font-size: 5rem;
     color: white;

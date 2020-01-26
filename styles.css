@@ -6,7 +6,7 @@ body {
 }
 
 body {
-    overflow: hidden;
+    max-height: 700px;
     background: linear-gradient(to bottom, #D8EAFF, white);
 }
 

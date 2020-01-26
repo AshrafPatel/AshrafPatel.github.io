@@ -21,7 +21,7 @@ header {
 
 fieldset {
     background: linear-gradient(#E2E2E2, #AEAEAE);
-    width: 70%;
+    width: 600px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -36,7 +36,7 @@ label {
 }
 
 .formSmallBoxes li {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;

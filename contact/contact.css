@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background: linear-gradient(#494949, #191919);
+    max-height: 700px;
 }
 
 header {
@@ -19,10 +20,8 @@ header {
 }
 
 fieldset {
-    position: relative;
-    top: 200px;
     background: linear-gradient(#E2E2E2, #AEAEAE);
-    width: 50%;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -39,9 +38,10 @@ label {
 .formSmallBoxes li {
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 400px;
+    width: 500px;
+    min-width: 400px;
 }
 
 .formSmallBoxes li>input {
@@ -70,11 +70,11 @@ fieldset textarea {
     font-size: 75px;
     text-align: center;
     word-wrap: normal;
-    margin-top: 25px;
-    color: #262626;
+    margin-top: 120px;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 6px 6px 6px white;
+    text-shadow: 6px 6px 6px black;
 }
 
 .btn {

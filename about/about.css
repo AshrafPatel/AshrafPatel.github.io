@@ -1,0 +1,41 @@
+html {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#00ABED, #005ADA);
+}
+
+h1 {
+    font-size: 5rem;
+    color: white;
+    padding-top: 70px;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+}
+
+.AboutContainer {
+    display: block;
+    margin: 0 auto;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70%;
+    box-shadow: 6px 6px 6px 6px black;
+    background: #9BB6EE;
+}
+
+p {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+
+}

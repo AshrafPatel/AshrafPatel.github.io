@@ -1,6 +1,5 @@
 html {
     height: 100%;
-    overflow: hidden;
     margin: 0;
 }
 
@@ -38,7 +37,7 @@ h1 {
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 10px 20px;
     font-family: 'Roboto', sans-serif;
 

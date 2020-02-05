@@ -51,10 +51,10 @@ h1 {
     font-weight: boldest;
     font-family: 'Righteous', cursive; }
 
-@media screen and (max-width > 768px) {
+@media screen and (max-width: 768px) {
   .disappear {
     display: none; } }
-@media screen and (min-width >= 1024px) {
+@media screen and (min-width: 1024px) {
   .disappear {
     display: block; } }
 

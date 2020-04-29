@@ -124,6 +124,7 @@ function enemySpawn() {
             element.positionY = Math.floor((Math.random()*CANVAS_HEIGHT)+3);
         }
         if (checkCollision(player, element)==true) {
+            alert("GAME OVER", score)
             window.location = "";
             return;
         }
